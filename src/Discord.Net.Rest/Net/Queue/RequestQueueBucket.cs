@@ -193,6 +193,7 @@ namespace Discord.Net.Queue
 #endif
                         if (millis > 0)
                             await Task.Delay(millis, request.Options.CancelToken).ConfigureAwait(false);
+                        else return;
                     }
                     else
                     {
